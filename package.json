@@ -1,0 +1,32 @@
+{
+  "name": "github-repos-to-md-list",
+  "version": "1.0.0",
+  "description": "Make a markdown list of a user's or organization's repositories",
+  "main": "index.js",
+  "dependencies": {
+    "fs": "^0.0.2",
+    "github-api": "^0.10.3",
+    "lodash": "^3.1.0",
+    "minimist": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:RichardLitt/github-repos-to-md-list.git"
+  },
+  "keywords": [
+    "markdown",
+    "github",
+    "api",
+    "repositories"
+  ],
+  "author": "Richard Littauer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RichardLitt/github-repos-to-md-list/issues"
+  },
+  "homepage": "https://github.com/RichardLitt/github-repos-to-md-list"
+}
