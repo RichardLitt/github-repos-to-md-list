@@ -4,15 +4,15 @@ var argv = require('minimist')(process.argv.slice(2));
 var _ = require("lodash")
 
 var github = new Github({
-  username: "YOUR_USERNAME",
-  password: "YOUR_PASSWORD",
+  username: "USERNAME",
+  password: "PASSWORD",
   auth: "basic"
 });
 
-var getOrgRepos = function(org) {
+var getOrgRepos = function(orgname) {
 	var user = github.getUser();
-	user.orgRepos(org, function(err, repos) {
-		fs.writeFile(org + '-repositories.txt', JSON.stringify(repos), function (err) {
+	user.orgRepos(orgname, function(err, repos) {
+		fs.writeFile(orgname + '-repositories.txt', JSON.stringify(repos), function (err) {
 		  if (err) throw err;
 		  console.log('It\'s saved!');
 		});
@@ -54,6 +54,6 @@ var parseJson = function(filename) {
   })
 }
 
-if (argv.getOrgRepos) getOrgRepos(argv.getRepos)
+if (argv.getOrgRepos) getOrgRepos(argv.getOrgRepos)
 if (argv.getRepos) getRepos()
 if (argv.parse) parseJson(argv.parse)
