@@ -4,7 +4,7 @@
   "description": "Make a markdown list of a user's or organization's repositories",
   "main": "index.js",
   "dependencies": {
-    "fs": "^0.0.2",
+    "fs": "0.0.2",
     "github-api": "^0.10.3",
     "lodash": "^3.1.0",
     "minimist": "^1.1.0"
