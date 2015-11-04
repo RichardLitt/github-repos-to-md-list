@@ -31,24 +31,18 @@ var getRepos = function() {
 
 var parseJson = function(filename) {
 	fs.readFile(filename, function(err, data) {
-    if (err) console.log("Failed to aprse file.")
+    if (err) console.log("Failed to parse file.")
 
     data = JSON.parse(data.toString())
 
     _.forEach(data, function(repo) {
 
-      var string = ' * [' + repo.name + ']('
+      var string = '* [' + repo.name + ']('
       string += repo.html_url + ') ' + repo.description
-      if (repo.fork && repo.homepage) 
-        string += ' (_Fork_)\n'
-      else 
-        string += '\n'
+      if (repo.fork && repo.homepage)
+        string += ' (_Fork_)'
 
-      fs.appendFile('links.md', string, function(err) {
-        if (err) console.log("Something broke", err)
-
-        console.log(string)
-      })
+      console.log(string)
     })
 
   })
