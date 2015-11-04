@@ -1,11 +1,17 @@
 var Github = require("github-api")
 var fs = require("fs")
-var argv = require('minimist')(process.argv.slice(2));
 var _ = require("lodash")
+var argv = require('minimist')(process.argv.slice(2), {
+  alias: {
+    o: getOrgRepos,
+    p: parseJson,
+    r: getRepos
+  }
+})
 
 var github = new Github({
-  username: "USERNAME",
-  password: "PASSWORD",
+  username: process.env.USERNAME,
+  password: process.env.PASSWORD,
   auth: "basic"
 });
 
