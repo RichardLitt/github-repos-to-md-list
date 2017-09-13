@@ -1,4 +1,6 @@
 # github-repos-to-md-list
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/RichardLitt/github-repos-to-md-list.svg)](https://greenkeeper.io/)
 Make a markdown list of a user's or organization's repositories
 
 # Usage
